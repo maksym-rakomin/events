@@ -1,7 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,800&display=swap');
 * {
     box-sizing: border-box;
+}
+html {
+    height: 100%;
+    font-size: 10px;
 }
 body {
     margin: 0;
     padding: 0;
+    font: 2.2rem/1.8 'Poppins', sans-serif;
+    color: #444;
+}
+.container {
+    max-width: 1140px;
+    width: 96%;
+    margin: 0 auto;
+}
+.section {
+    padding: 80px 0;
+    outline: 1px solid red;
+}
+.section--extra-padding {
+    padding: 150px 0;
+}
+.section--light {
+    color: #fff;
+    background-color: #333399;
+}
+.cover {
+    min-height: 100vh;
+    padding: 80px 10px;
+    color: #fff;
+    background-color: #0e0d1b;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover__content {
+    max-width: 960px;
+    text-align: center;
+}
+.cover__title {
+    font-size: 6rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.cover__text {
+    font-size: 3rem;
+    margin-bottom: 2.75em;
+}
+/* Button */
+.btn {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    background: #c60ebe;
+    border: 3px solid #c60ebe;
+    padding: 1em 2em;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all .25s ease-in-out;
+    display: inline-block;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+    color: #c60ebe;
+    background-color: transparent;
+}
+.btn--transparent {
+    background-color: transparent;
+    color: #fff;
+}
+.btn--transparent:hover,
+.btn--transparent:focus,
+.btn--transparent:active {
+    color: #c60ebe;
+    background-color: #fff;
+}
+
+/* Navigation */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;s
+}
+nav {
+    font-weight: 800;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.nav a {
+    text-decoration: none;
+    transition: all .25s ease-in-out;
+    color: #fff;
+}
+.nav a:hover,
+.nav a:active,
+.nav a:focus {
+    color: #c60ebe;
+
+}
+.logo {
+    font-size: 3.4rem;
+}
+.menu {
+    padding: 0;
+    list-style: none;
+}
+.menu__item {
+    display: inline-block;
+    margin-left: 3rem;
+}
+.menu__link {
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-bottom: 3px solid transparent;
+}
+/* .menu__link:hover, */
+.menu__active:active,
+.menu__link.active,
+.menu__link:focus {
+    border-color: #c60ebe;
+    color: #c60ebe;
 }
