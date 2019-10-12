@@ -17,9 +17,25 @@ body {
     width: 96%;
     margin: 0 auto;
 }
+h2, h3, h4 {
+    line-height: 1.2;
+}
+h2 {
+    font-size: 6.2rem;
+}
+h3 {
+    font-size: 3.6rem;
+}
+h4 {
+    font-size: 3rem;
+    margin: 2em 0 0;
+}
+p {
+    margin: 1.6em 0;
+}
 .section {
     padding: 80px 0;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 .section--extra-padding {
     padding: 150px 0;
@@ -27,6 +43,15 @@ body {
 .section--light {
     color: #fff;
     background-color: #333399;
+}
+.section--gradient {
+    background-image: linear-gradient(to bottom, #333399, #fe00cc)
+}
+.section__title {
+    margin: 0;
+}
+.section__text {
+    margin: 3em 0;
 }
 .cover {
     min-height: 100vh;
@@ -73,6 +98,7 @@ body {
     background-color: transparent;
 }
 .btn--transparent {
+    border: 3px solid #fff;
     background-color: transparent;
     color: #fff;
 }
@@ -129,4 +155,147 @@ nav {
 .menu__link:focus {
     border-color: #c60ebe;
     color: #c60ebe;
+}
+/* colors of text */
+.text-purple {
+    color: #c60ebe ;
+}
+.text-yellow {
+    color: #ffde16 ;
+}
+.text-pink {
+    color: #ffbd9e;
+}
+.text-blue {
+    color: #20c9e0 ;
+}
+.text-green {
+    color: #2eac66 ;
+}
+.text-red {
+    color: #ff6179 ;
+}
+/* sizes of text */
+.text-large {
+    font-size: 1.5em;
+}
+.text-small {
+    font-size: 0.6em;
+}
+/* text alightment */
+.text-center {
+    text-align: center;
+}
+/* Courses */
+.courses {
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    margin: 3em 0 0;
+}
+.course{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3em;
+}
+.course span {
+    vertical-align: top;
+}
+.course__number {
+    font-size: 4.4rem;
+    font-weight: 800;
+    line-height: 1;
+    min-width: 150px;
+    display: inline-block;
+    text-align: right;
+    position: relative;
+}
+.course__number i {
+    font-size: .7em;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.course__number:after {
+    content: ".";
+    font-family: 'Times New Roman';
+    font-size: 1.4em;
+    line-height: .6;
+}
+.course__text {
+    padding-left: 1.2em;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.users{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3em;
+}
+.user {
+    /* outline: 1px solid red; */
+    width: 28%;
+    text-align: center;
+    padding: 30px;
+    overflow: hidden;
+}
+.user__wrap {
+    /* outline: 2px solid yellowgreen; */
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.user__img {
+    /* width: 100%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 10px;
+}
+.user__name {
+    font-weight: 800;
+    font-size: 2.4rem;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.user__position {
+    font-size: 1.6rem;
+    max-height: 58px;
+}
+.contdown {
+    text-align: center;
+}
+.contdown__item {
+    display: inline-block;
+    padding: 35px;
+    margin: 30px;
+    border: 1px solid #460340;
+    background: #464646;
+    min-width: 178px;
+
+}
+.countdown__item--transparent {
+    border: 1px solid #fff;
+    background-color: inherit;
+}
+.contdown__num {
+    font-size: 7.2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+.contdown__text {
+    text-transform: uppercase;
+    line-height: 1;
 }
