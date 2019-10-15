@@ -12,6 +12,10 @@ body {
     font: 2.2rem/1.8 'Poppins', sans-serif;
     color: #444;
 }
+a {
+    text-decoration: none;
+    color: #fff;
+}
 .container {
     max-width: 1140px;
     width: 96%;
@@ -230,7 +234,8 @@ nav {
     font-weight: 500;
     line-height: 1.4;
 }
-.users{
+.users,
+.img-sponsors{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -298,4 +303,49 @@ nav {
 .contdown__text {
     text-transform: uppercase;
     line-height: 1;
+}
+.user__wrap--circle,
+.user__img--circle {
+    border-radius: 50%;
+}
+.section--bgc-pink{
+    background-color: #ffe9eb;
+}
+.users--mt {
+    margin-top: 60px;
+}
+.img-sponsors {
+    margin-top: 10rem;
+}
+
+
+
+
+
+
+footer {
+    background-color: #eeeeee;
+}
+input[type="email"]{
+    padding: 30px 10px;
+    border-radius: 10px;
+    border: none;
+}
+.social {
+    margin-top: 85px;
+    font-size: 0px;
+}
+.social__btn {
+    padding: 25px;
+    background: #dedede;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    margin: 0 5px;
+    transition: all .3s ease;
+}
+.social__btn:hover,
+.social__btn:focus,
+.social__btn:active {
+    color: #fff;
+    background-color: #9e9d9d;
 }
