@@ -183,6 +183,9 @@ nav {
 .text-large {
     font-size: 1.5em;
 }
+.text-medium {
+    font-size: .9em;
+}
 .text-small {
     font-size: 0.6em;
 }
@@ -234,8 +237,7 @@ nav {
     font-weight: 500;
     line-height: 1.4;
 }
-.users,
-.img-sponsors{
+.users{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -247,6 +249,11 @@ nav {
     text-align: center;
     padding: 30px;
     overflow: hidden;
+}
+.user--round {
+    width: 31%;
+    padding: 10px;
+    margin-top: 70px;
 }
 .user__wrap {
     /* outline: 2px solid yellowgreen; */
@@ -308,28 +315,59 @@ nav {
 .user__img--circle {
     border-radius: 50%;
 }
+
+
+
+
+
 .section--bgc-pink{
     background-color: #ffe9eb;
 }
-.users--mt {
+/* .users--mt {
     margin-top: 60px;
+} */
+
+
+
+.sponsors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5rem;
 }
 .img-sponsors {
-    margin-top: 10rem;
+    transform: scale(.8);
+    transition: all .25s ease-in;
 }
 
-
-
+.img-sponsors:hover,
+.img-sponsors:active,
+.img-sponsors:focus {
+    transform: scale(1);
+}
 
 
 
 footer {
     background-color: #eeeeee;
 }
-input[type="email"]{
-    padding: 30px 10px;
+.form-subscribe__input {
+    font-size: 2.2rem;
+    color: #000;
+    border: 3px solid #fff;
+    padding: .7em;
     border-radius: 10px;
-    border: none;
+    transition: all .25s ease-in-out;
+    display: inline-block;
+    width: 400px;
+}
+.form-subscribe__input:active,
+.form-subscribe__input:focus {
+    outline: none;
+    border: 3px solid #e71cb4;
+}
+.form-subscribe .btn{
+    padding: .7em;
 }
 .social {
     margin-top: 85px;
@@ -346,6 +384,51 @@ input[type="email"]{
 .social__btn:hover,
 .social__btn:focus,
 .social__btn:active {
-    color: #fff;
-    background-color: #9e9d9d;
+    color: #dedede;
+    background-color: #fff;
+}
+
+
+
+
+.form-contact {
+    max-width: 650px;
+    margin: 0 auto;
+    outline: 1px solid red;
+}
+.form-contact__input {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000;
+    transition: all .25s ease-in-out;
+    padding: 15px 0;
+}
+.form-contact__input:focus {
+    outline: none;
+    border-color: transparent;
+    border-bottom: 2px solid #000;
+}
+.form-contact__label {
+    font-size: 1.3rem;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform: translate(0, -100%);
+    padding: 15px 0;
+    transition: all .25s ease-in-out;
+}
+.form-contact__input:focus + .form-contact__label {
+    transform: translate(0, 0);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.col {
+    width: calc(50% - 15px);
+    outline: 1px solid green;
+    position: relative;
+
 }
