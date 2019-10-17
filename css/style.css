@@ -112,6 +112,24 @@ p {
     color: #c60ebe;
     background-color: #fff;
 }
+.btn--dark {
+    background-color: #555;
+    border-color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.btn--dark:hover,
+.btn--dark:focus,
+.btn--dark:active  {
+    background-color: #fff;
+    color: #555;
+}
+
+.btn--sharp {
+    border-radius: 0;
+}
 
 /* Navigation */
 header {
@@ -192,6 +210,9 @@ nav {
 /* text alightment */
 .text-center {
     text-align: center;
+}
+.text-right {
+    text-align: right;
 }
 /* Courses */
 .courses {
@@ -394,7 +415,7 @@ footer {
 .form-contact {
     max-width: 650px;
     margin: 0 auto;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 .form-contact__input {
     display: inline-block;
@@ -403,11 +424,13 @@ footer {
     border-bottom: 2px solid #000;
     transition: all .25s ease-in-out;
     padding: 15px 0;
+    font-size: 1.6rem;
 }
-.form-contact__input:focus {
+.form-contact__input:focus,
+.form-contact__input.fild {
     outline: none;
     border-color: transparent;
-    border-bottom: 2px solid #000;
+    /* border-bottom: 2px solid #000; */
 }
 .form-contact__label {
     font-size: 1.3rem;
@@ -418,17 +441,31 @@ footer {
     padding: 15px 0;
     transition: all .25s ease-in-out;
 }
-.form-contact__input:focus + .form-contact__label {
-    transform: translate(0, 0);
+.form-contact__input:focus + .form-contact__label,
+.form-contact__input.fild + .form-contact__label {
+    transform: translate(0, -20%);
+    z-index: 1;
 }
-
+textarea.form-contact__input {
+    resize: none;
+    width: 100%;
+    
+}
 .row {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+}
+.row--right {
+    justify-content: flex-end;
 }
 .col {
     width: calc(50% - 15px);
-    outline: 1px solid green;
+    border-bottom: 2px solid #000;
+    /* outline: 1px solid green; */
     position: relative;
-
+        font-size: 0px;
+}
+.col--lg {
+    width: 100%;
 }

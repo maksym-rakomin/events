@@ -51,7 +51,7 @@
                         <span class="course__text">Cras ultricies ligula sed mag.</span>
                     </li>
                     <li class="course">
-                        <span class="course__number text-yellow"><i class="fas fa-chevron-right"></i>02</span
+                        <span class="course__number text-yellow"><i class="fas fa-chevron-right"></i>02</span>
                             <span class="course__text">Pellentesque in ipsum id orci porta dapibus.</span>
                     </li>
                     <li class="course">
@@ -187,14 +187,34 @@
                 <form action="" action="POST" name="contact" class="form-contact" autocomplete="off">
                     <div class="row">
                         <div class="col">
-                            <input class="form-contact__input" type="text" name="firstname" id="firstname">
+                            <input required class="form-contact__input" type="text" name="firstname" id="firstname">
                             <label class="form-contact__label" for="firstname">First name</label>
                         </div>
                     
                         <div class="col">
-                            <input class="form-contact__input" type="text" name="lastname" id="lastname">
+                            <input required class="form-contact__input" type="text" name="lastname" id="lastname">
                             <label class="form-contact__label" for="lastname">Last name</label>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input required class="form-contact__input" type="email" name="email" id="email">
+                            <label class="form-contact__label" for="email">Email</label>
+                        </div>
+                    
+                        <div class="col">
+                            <input required class="form-contact__input" type="url" name="site" id="site">
+                            <label class="form-contact__label" for="site">Web site</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col col--lg">
+                                <textarea class="form-contact__input" name="message" id="message" rows="7"></textarea>
+                                <label class="form-contact__label" for="message">Message</label>
+                            </div>
+                    </div>
+                    <div class="row row--right">
+                        <button type="submit" class="btn btn--dark btn--sharp">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -218,5 +238,16 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/8c5aa2b921.js" crossorigin="anonymous"></script>
+    <script>
+        let inputs = document.querySelectorAll('.form-contact__input');
+        inputs.forEach(function(input){
+            input.addEventListener('change', function() {
+                // console.log(this.value);
+                if (this.value.length > 0) {
+                    this.classList.add('fild');
+                }
+            })
+        })
+    </script>
 </body>
 </html>
